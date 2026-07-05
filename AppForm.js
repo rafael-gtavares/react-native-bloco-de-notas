@@ -14,7 +14,7 @@ export default function AppForm({ route, navigation }) {
   const [tituloPagina, setTituloPagina] = useState('Adicionar nota')
 
   useEffect(() => {
-    if (route.params) {
+    if (route.params?.id) {
       setTitulo(route.params.titulo);
       setConteudo(route.params.conteudo);
       setTituloPagina("Editar nota");
@@ -24,7 +24,7 @@ export default function AppForm({ route, navigation }) {
       setTituloPagina("Adicionar nota");
     }
   }, [route.params]);
-
+  
   function handleTituloChange(titulo) { setTitulo(titulo); }
   function handleConteudoChange(conteudo) { setConteudo(conteudo); }
 
@@ -32,7 +32,7 @@ export default function AppForm({ route, navigation }) {
     const listItem = { titulo, conteudo };
 
     Database.saveItem(listItem, id).then(response => navigation.navigate("AppList", listItem));
-    
+
     navigation.setParams({
       id: undefined,
       titulo: undefined,
