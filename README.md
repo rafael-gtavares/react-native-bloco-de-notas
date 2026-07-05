@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# 📝 Bloco de Notas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo de bloco de notas desenvolvido em **React Native** com **Expo**, utilizando **AsyncStorage** para persistência local dos dados e **React Navigation** para navegação entre telas.
 
-## Get started
+O projeto foi desenvolvido como atividade prática da disciplina, tendo como base o CRUD criado em sala de aula.
 
-1. Install dependencies
+## Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- ✅ Cadastro de notas
+- ✅ Listagem de notas
+- ✅ Edição de notas
+- ✅ Exclusão de notas
+- ✅ Confirmação antes da exclusão
+- ✅ Persistência dos dados com AsyncStorage
+- ✅ Navegação entre as telas utilizando Bottom Tab Navigator
 
-2. Start the app
+## Estrutura das notas
 
-   ```bash
-   npx expo start
-   ```
+Cada nota possui os seguintes campos:
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```javascript
+{
+  id,
+  titulo,
+  conteudo
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Tecnologias utilizadas
 
-## Learn more
+- React Native
+- Expo
+- React Navigation
+- AsyncStorage
+- JavaScript
 
-To learn more about developing your project with Expo, look at the following resources:
+## Estrutura do projeto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+App.js
+AppTab.js
+AppList.js
+AppItem.js
+AppForm.js
+DataBase.js
+```
 
-## Join the community
+## Como executar
 
-Join our community of developers creating universal apps.
+1. Clone o repositório:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+git clone <url-do-repositorio>
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Execute o projeto:
+
+```bash
+npx expo start
+```
+
+4. Abra o aplicativo utilizando o Expo Go ou um emulador Android/iOS.
+
+## Funcionalidades implementadas
+
+- Tela de listagem de notas
+- Tela de cadastro e edição
+- Navegação entre telas
+- Listagem das notas pelo título
+- Exclusão com confirmação
+- Edição de notas com preenchimento automático do formulário
+- Armazenamento local utilizando AsyncStorage
+
+## Autor
+
+Rafael Tavares
